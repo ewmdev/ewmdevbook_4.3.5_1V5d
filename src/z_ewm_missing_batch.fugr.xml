@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_FUGR" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <AREAT>Function Group for Enhancement 1V5d</AREAT>
+   <INCLUDES>
+    <SOBJ_NAME>LZ_EWM_MISSING_BATCHTOP</SOBJ_NAME>
+    <SOBJ_NAME>SAPLZ_EWM_MISSING_BATCH</SOBJ_NAME>
+   </INCLUDES>
+   <FUNCTIONS>
+    <item>
+     <FUNCNAME>Z_EWM_GET_BATCH_FROM_DLV</FUNCNAME>
+     <SHORT_TEXT>Enhancement 1V5d: Batch from Delivery</SHORT_TEXT>
+     <IMPORT>
+      <RSIMP>
+       <PARAMETER>IV_VBELN</PARAMETER>
+       <REFERENCE>X</REFERENCE>
+       <TYP>VBELN</TYP>
+      </RSIMP>
+     </IMPORT>
+     <EXPORT>
+      <RSEXP>
+       <PARAMETER>ET_MATNR_CHARG</PARAMETER>
+       <REFERENCE>X</REFERENCE>
+       <TYP>MCHA_KEY_TABLE</TYP>
+      </RSEXP>
+     </EXPORT>
+     <DOCUMENTATION>
+      <RSFDO>
+       <PARAMETER>IV_VBELN</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Sales and Distribution Document Number</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>ET_MATNR_CHARG</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Sorted Table of MCHA Key Fields</STEXT>
+      </RSFDO>
+     </DOCUMENTATION>
+    </item>
+   </FUNCTIONS>
+  </asx:values>
+ </asx:abap>
+</abapGit>

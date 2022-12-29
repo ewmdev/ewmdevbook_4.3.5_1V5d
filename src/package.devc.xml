@@ -3,7 +3,7 @@
  <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
   <asx:values>
    <DEVC>
-    <CTEXT>Chapter 423 Delay InbDelivery with Missing Batch</CTEXT>
+    <CTEXT>Enhancement 1V5d: Delay Inbound Delivery with Missing Batch</CTEXT>
    </DEVC>
   </asx:values>
  </asx:abap>
