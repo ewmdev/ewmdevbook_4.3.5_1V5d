@@ -161,10 +161,39 @@ CLASS ZCL_IM_ERP_INT_CONF IMPLEMENTATION.
   ENDMETHOD.
 
 
-  method /SCWM/IF_EX_ERP_INT_CONF~DET_ERP_DLVTYPE.
-  endmethod.
+  METHOD /scwm/if_ex_erp_int_conf~det_erp_dlvtype.
+
+    DATA lo_std TYPE REF TO /scwm/cl_def_im_erp_int_conf.
+
+    CREATE OBJECT lo_std.
+    CALL METHOD lo_std->/scwm/if_ex_erp_int_conf~det_erp_dlvtype
+      EXPORTING
+        iv_lgnum       = iv_lgnum
+        iv_erp_bskey   = iv_erp_bskey
+        iv_doctype     = iv_doctype
+        is_head        = is_head
+      RECEIVING
+        ev_erp_dlvtype = ev_erp_dlvtype.
+
+  ENDMETHOD.
 
 
-  method /SCWM/IF_EX_ERP_INT_CONF~DET_ITEMTYPE.
-  endmethod.
+  METHOD /scwm/if_ex_erp_int_conf~det_itemtype.
+
+    DATA lo_std TYPE REF TO /scwm/cl_def_im_erp_int_conf.
+
+    CREATE OBJECT lo_std.
+    CALL METHOD lo_std->/scwm/if_ex_erp_int_conf~det_itemtype
+      EXPORTING
+        iv_lgnum                   = iv_lgnum
+        is_item                    = is_item
+        iv_itmmapdif               = iv_itmmapdif
+        iv_cw_rel                  = iv_cw_rel
+        is_item_reference_order    = is_item_reference_order
+        is_item_ref_purchase_order = is_item_ref_purchase_order
+        iv_doctype                 = iv_doctype
+      RECEIVING
+        ev_itemtype                = ev_itemtype.
+
+  ENDMETHOD.
 ENDCLASS.
